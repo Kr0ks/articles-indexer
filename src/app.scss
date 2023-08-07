@@ -11,17 +11,17 @@ body {
 }
 
 .hero {
+  & > h1 {
+    line-height: 0.5em;
+  }
+  & > p {
+    line-height: 1.5em;
+  }
   margin-top: 1rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.hero > h1 {
-  line-height: 0.5em;
-}
-.hero > p {
-  line-height: 1.5em;
-}
 .lista-artigos--wrapper {
   display: flex;
   flex-direction: column;
@@ -31,6 +31,9 @@ body {
 }
 
 .lista-artigos--btn {
+  &:visited {
+    color: white;
+  }
   padding-left: 0.5rem;
   text-decoration: none;
   padding-right: 0.5rem;
@@ -47,29 +50,6 @@ body {
   .lista-artigos--btn {
     width: 35rem;
   }
-}
-
-.lista-artigos--btn:visited {
-  color: white;
-}
-
-.breadcrumbs--wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-}
-
-.breadcrumbs--item {
-  color: white;
-}
-
-.breadcrumbs--item:active {
-  color: lime;
-}
-
-.breadcrumbs--item[data-last-breadcrumb="false"]::after {
-  content: "/";
 }
 
 footer {
