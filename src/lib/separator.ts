@@ -1,1 +1,1 @@
-export const Separator = "_____";
+export const Separator = ";;";
