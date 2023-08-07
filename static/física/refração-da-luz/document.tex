@@ -1,0 +1,85 @@
+
+\documentclass[
+	12pt,				
+	openright,			
+	oneside,			
+	a4paper,			
+	brazil				
+	]{abntex2}
+
+
+% --------- PACOTES ---------
+\usepackage{centernot}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lastpage}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+% --------- CAPA ---------
+\titulo{Refração da luz}
+\autor{Giuliano}
+\local{Recife, PE}
+\data{2023}
+
+% --------- INFOS DO PDF ---------
+\makeatletter
+\hypersetup{
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}, 
+		colorlinks=true,       		
+    	linkcolor=blue,          	
+    	citecolor=blue,        		
+    	filecolor=magenta,
+		urlcolor=blue,
+}
+\makeatother
+
+
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm}
+
+\makeindex
+
+\graphicspath{{./imgs}}
+\begin{document}
+
+\frenchspacing
+\imprimircapa
+\tableofcontents
+\newpage
+
+% --------- SEÇÕES ---------
+
+\section[Introdução à refração da luz]{Introdução à refração da luz}
+\textbf{A refração da luz significa que a velocidade da luz foi alterada devido à mudança no meio de propagação.} 
+Nela, tem-se três grandezas: 
+$n$, o qual significa índice de refração; 
+$C$, o qual significa a constante da velocidade da luz no vácuo; 
+e $V$, a qual diz respeito à velocidade da luz no meio.
+Quanto maior o índice de refração, menor é a velocidade em que a luz se propagará nesse meio.
+Há também, uma fórmula para o cálculo daquele:
+
+$$
+n = \frac{C}{V}
+$$
+
+\section[Índice de refração relativo]{Índice de refração relativo}
+O índice de refração relativo é a razão entre dois índices de refrações absolutos; ou seja:
+
+$$
+n_{1,2} = \frac{n_1}{n_2} \implies n_{1,2} = \frac{\frac{C_1}{V_1}}{\frac{C_2}{V_2}} = \frac{\centernot{C_1}}{V_1}\cdot\frac{V_2}{\centernot{C_2}}
+\therefore n_{1,2} = \frac{V_2}{V_1}
+$$
+
+\section[Desvio ângular]{Desvio ângular}
+É possível calcular o desvio ângular através da equação $n_1 sen\theta_1 = n_2 sen\theta_2$, pois a razão entre o seno dos ângulos é igual à razão
+entre as velocidades da luz nos meios incidentes.
+\end{document}
