@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Materias } from "$lib/materias";
   import { toUpperCaseFirst } from "$lib/toUpperCaseFirst";
+  import Head from "../components/head.svelte";
   import Hero from "../components/hero.svelte";
   import Lista from "../components/lista.svelte";
 
@@ -10,5 +11,6 @@
 
   
 </script>
+<Head title="Kroks | Artigos" description="Navegue sobre vários artigos escolares de forma gratuita e confiável."/>
 <Hero title={"kroks.space"}/>
 <Lista lista={materias}/>

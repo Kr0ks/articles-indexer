@@ -5,6 +5,7 @@
   import { Separator } from "$lib/separator";
   import Hero from "../../../components/hero.svelte";
   import { toUpperCaseFirst } from "$lib/toUpperCaseFirst";
+  import Head from "../../../components/head.svelte";
     export let data:import("./$types").PageData ;
 
     const materia = data.slug
@@ -18,6 +19,7 @@
     console.log(parsed)
 </script>
 
+<Head title="Kroks | Artigos | {toUpperCaseFirst(materia)}" description="Navegue por artigos sobre {materia}"/>
 <Hero title={toUpperCaseFirst(materia)}/>
 <Lista lista={parsed}/>
 

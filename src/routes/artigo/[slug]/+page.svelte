@@ -4,13 +4,16 @@
     import Lista from "../../../components/lista.svelte";
     import { Separator } from "$lib/separator";
   import Hero from "../../../components/hero.svelte";
+  import Head from "../../../components/head.svelte";
+  import { toUpperCaseFirst } from "$lib/toUpperCaseFirst";
       export let data:import("./$types").PageData ;
     
       const links = Materias[data.materia][data.titulo]
 
   </script>
   
-  <Hero title={data.titulo[0].toUpperCase() + data.titulo.substring(1)}/>
+  <Head title={`Kroks | Artigo | ${toUpperCaseFirst(data.titulo)}`} description={`Navegue por artigos sobre ${data.titulo}`}/>
+  <Hero title={toUpperCaseFirst(data.titulo)}/>
   <Lista lista={links}/>
   
   
