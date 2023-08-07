@@ -12,5 +12,5 @@
   
 </script>
 <Head title="Kroks | Artigos" description="Navegue sobre vários artigos escolares de forma gratuita e confiável."/>
-<Hero title={"kroks.space"}/>
+<Hero title={"kroks.cloud"}/>
 <Lista lista={materias}/>

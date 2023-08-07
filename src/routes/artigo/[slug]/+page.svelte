@@ -3,9 +3,9 @@
     import { parse } from "svelte/compiler";
     import Lista from "../../../components/lista.svelte";
     import { Separator } from "$lib/separator";
-  import Hero from "../../../components/hero.svelte";
-  import Head from "../../../components/head.svelte";
-  import { toUpperCaseFirst } from "$lib/toUpperCaseFirst";
+    import Hero from "../../../components/hero.svelte";
+    import Head from "../../../components/head.svelte";
+    import { toUpperCaseFirst } from "$lib/toUpperCaseFirst";
       export let data:import("./$types").PageData ;
     
       const links = Materias[data.materia][data.titulo]

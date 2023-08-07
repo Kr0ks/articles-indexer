@@ -34,10 +34,10 @@ body {
   &:visited {
     color: white;
   }
-  padding-left: 0.5rem;
+  padding-right: 1rem;
   text-decoration: none;
-  padding-right: 0.5rem;
-  width: 95%;
+  padding-left: 1rem;
+  width: 85%;
   min-height: 3rem;
   display: flex;
   border-radius: 0.25rem;
@@ -52,6 +52,34 @@ body {
   }
 }
 
+.error--section {
+  & > h1 {
+    font-size: 40px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  & > h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+  }
+  & > a {
+    &:visited {
+      color: white;
+    }
+    margin-top: 1.5rem;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5rem;
+  }
+  height: 100%;
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 100%;
+
+}
 footer {
   margin-top: 1rem;
   padding-top: 0.5rem;
