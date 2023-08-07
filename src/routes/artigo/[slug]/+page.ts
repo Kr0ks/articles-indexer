@@ -5,8 +5,8 @@ import { error } from "@sveltejs/kit";
 export const load = ({ params }) => {
   const slug = params.slug;
   const split = slug.split(Separator);
-  if (Materias[split[0]][split[1]] === undefined) {
-    throw error(404, "Materia inexistente");
+  if (Materias[split[0]] === undefined || Materias[split[0]][split[1]] === undefined) {
+    throw error(404, "Artigo inexistente");
   }
   return { materia: split[0], titulo: split[1] };
 };
