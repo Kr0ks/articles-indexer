@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
-
-    export let error: ErrorResponse;
+    import type error from "../app.d.ts"
+    export let error: App.Error;
 </script>
 
 <section class="error--section">

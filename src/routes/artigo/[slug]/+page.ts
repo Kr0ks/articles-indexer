@@ -10,7 +10,7 @@ export const load = ({ params }) => {
     throw error(404, 
       {
         code: 404, message: "Artigo inexistente"
-      } as unknown as ErrorResponse
+      } 
 );
   }
   return { materia: split[0], titulo: split[1] };
