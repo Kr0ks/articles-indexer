@@ -6,7 +6,7 @@
   import Lista from "../components/lista.svelte";
 
   const materias = Object.entries(Materias).map((v) => {
-    return {link: `/materia/${v[0]}`, nome: toUpperCaseFirst(v[0])}
+    return {link: `/${v[0]}`, nome: toUpperCaseFirst(v[0])}
   })
 
   
