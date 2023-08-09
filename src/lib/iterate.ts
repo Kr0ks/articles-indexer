@@ -10,13 +10,15 @@ export const Iterate = (
   let p = obj;
   const resultados: Array<{ nome: string; link: string }> = [];
   for (let i = start; i < split.length; i++) {
+    const ultimo = i + 1 == split.length;
+
     // Verificar se estamos em nested folders
     if (start <= 0) {
       p = p[split[i]];
     }
 
     // Esse i+1 !== 0 é importante pois difere do loop abaixo deste
-    if (i + 1 !== split.length && Array.isArray(p)) {
+    if (!ultimo && Array.isArray(p)) {
       for (let o = 0; o < p.length; o++) {
         const a = p[o];
         if (a["tipo"] === "pasta" && split[i + 1] === a["nome"]) {
@@ -26,18 +28,15 @@ export const Iterate = (
     }
 
     // Renderizar os componentes
-    if (i + 1 === split.length) {
-      const a = Object.entries(p);
-      for (let o = 0; o < a.length; o++) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const b: any = a[o][1];
-        const n: string = b["nome"];
-        let link = b["link"];
-        if (b["tipo"] === "pasta") {
-          link = `${path}${Separator}${n}`;
-        }
-        resultados.push({ nome: n, link: link });
-      }
+    if (ultimo) {
+      Object.entries(p).map((v: any) => {
+        v = v[1];
+        const n: string = v["nome"];
+        resultados.push({
+          nome: n,
+          link: v["tipo"] === "pasta" ? `${path}${Separator}${n}` : v["link"],
+        });
+      });
     }
   }
 
