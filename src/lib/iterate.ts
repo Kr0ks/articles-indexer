@@ -34,7 +34,8 @@ export const Iterate = (
         const n: string = v["nome"];
         resultados.push({
           nome: n,
-          link: v["tipo"] === "pasta" ? `${path}${Separator}${n}` : v["link"],
+          link:
+            v["tipo"] === "pasta" ? `/x/${path}${Separator}${n}` : v["link"],
         });
       });
     }
