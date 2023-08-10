@@ -8,8 +8,8 @@
 
 ## Pendências
 
-[✅] Mais customização às páginas  
-[❌] Mais profundidade de arquivos e pastas
+[❌] Mais customização às páginas  
+[✅] Mais profundidade de arquivos e pastas
 
 ## Licença
 
