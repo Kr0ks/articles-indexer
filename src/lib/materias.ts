@@ -1,4 +1,22 @@
 export const Materias: Record<string, any> = {
+  química: [
+    {
+      tipo: "pasta",
+      nome: "Reações reversível (WIP)",
+      pasta: [
+        {
+          tipo: "link",
+          link: "/química/reações-reversíveis/document.pdf",
+          nome: "document.pdf",
+        },
+        {
+          tipo: "link",
+          link: "/química/reações-reversíveis/document.tex",
+          nome: "document.tex",
+        },
+      ],
+    },
+  ],
   física: [
     {
       tipo: "pasta",
@@ -8,6 +26,11 @@ export const Materias: Record<string, any> = {
           tipo: "link",
           link: "/física/refração-da-luz/document.pdf",
           nome: "document.pdf",
+        },
+        {
+          tipo: "link",
+          link: "/física/refração-da-luz/document.tex",
+          nome: "document.tex",
         },
       ],
     },
