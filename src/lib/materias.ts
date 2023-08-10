@@ -2,7 +2,7 @@ export const Materias: Record<string, any> = {
   química: [
     {
       tipo: "pasta",
-      nome: "Reações reversível (WIP)",
+      nome: "Reações reversíveis (WIP)",
       pasta: [
         {
           tipo: "link",
